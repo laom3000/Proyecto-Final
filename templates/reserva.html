@@ -1,0 +1,102 @@
+<html>
+
+<head>
+<style>
+<title>Vuelos.com</title>
+<title>Vuelos.com</title>
+html {
+    height: 100%;
+    background-image: url("static/back.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body{
+margin: 0;
+padding: 0;
+background: url(../static/back.jpg) no-repeat center top;
+background-size: cover;
+font-family: sans-serif;
+height: 100vh;
+}
+.login-box {
+width:320px;
+height:560px;
+background: #000;
+color: #fff;
+top: 50%;
+left: 50%;
+position: absolute;
+transform: translate(-50%, -50%);
+box-sizing: border-box;
+padding: 70px 30px;
+}
+.login-box h1{
+margin: 0;
+padding:0 0 20px;
+text-aling: center;
+font-size: 16px;
+}
+.login-box label{
+margin: o;
+padding: 0 0 20px;
+text-alling: center;
+font-size: 22px;
+}
+.login-box .logo{
+width: 100px;
+height: 100px;
+border-radius: 50%;
+position: absolute;
+top: -50px;
+left: calc(50% - 50%);
+}
+.login-box input{
+width: 100%;
+margin-bottom: 20px;
+}
+.login-box input[type=text], .login-box input[type=password]{
+border: none;
+border-bottm: 1px solid #fff;
+background: transparent;
+outline: none;
+height: 20px;
+color: #fff;
+font-size: 16px;
+}
+.login-box input[type=submit]{
+border: none;
+outline: none;
+height: 40px;
+background: #b80f22;
+color: #fff;
+font-size: 18px;
+border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+<h1>Vuelos.com</h1>
+<div class="login-box">
+	<form action="{{ url_for('reserva') }}" method="POST">
+	<br>
+	<h1>Aerolinea</h1>
+	<input type=text name="aerolinea" placeholder="Nombre de aerolinea">
+	<h1>Ciudad de salida</h1>
+	<input type=text name="ciudad salida" placeholder="Ciudad de partida">
+	<h1>Ciudad de llegada</h1>
+	<input type=text name="ciudad llegada" placeholder="Ciudad de llegada">
+	<input type=submit name="boton" value="Buscar vuelo">
+    	</form>
+	<form action="{{ url_for('deslogearse') }}" method="POST">
+	<input type=submit name="boton" value="Deslogearse">
+	</form>
+	<form action="{{ url_for('volverMain') }}" method="POST">
+	<input type=submit name="boton" value="Home">
+	</form>
+</div>
+</body>
+
+</html>
